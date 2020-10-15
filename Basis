@@ -1,0 +1,70 @@
+【1.查詢】select...from...
+
+select * from table;
+
+【2.建立表】create table...
+
+CREATE TABLE celebs (
+   id INTEGER, 
+   name TEXT, 
+   age INTEGER
+);
+
+【3.新增資料】insert into...values...
+
+INSERT INTO celebs (id, name, age) 
+VALUES (1, 'Justin Bieber', 22);
+
+【4.修改表】alter table...add...
+
+alter table celebs
+add column twitter_handle text;
+
+【5.依照設定條件修改資料】update...set...where...
+
+update celebs
+set twitter_handle = "@4t4"
+where id = 4;
+
+【6.依照設定條件刪除資料】delete from...where...
+
+delete from celebs
+where twitter_handle is null;
+
+【7.設定表限制條件】
+
+primary key用於標示主鍵，限制無法輸入與原有相同的資料
+unique用於限制每一行的資料都不能相同
+not null用於限制一定要輸入資料，不能空著
+default用於設定預設值
+
+create table awards(
+  id integer primary key,
+  recipient text not null,
+  award_name text default "FGG"
+);
+ 
+ 【8.in、between、、】
+ 
+select name from world
+where name in ("AA", "GEG", "Ggeg");
+
+select name from world
+where area between 2500 and 3000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
